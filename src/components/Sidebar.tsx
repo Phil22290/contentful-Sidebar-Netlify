@@ -20,7 +20,7 @@ const Sidebar = (props: SidebarProps) => {
 
 	const onClickHandler = (e: any) => {
 		e.preventDefault();
-		fetch("https://api.netlify.com/build_hooks/61766ed2667ae2361e2569e6", {
+		fetch("www.dummy.com", {
 			method: "POST",
 		})
 			.then((response) => {
@@ -29,7 +29,9 @@ const Sidebar = (props: SidebarProps) => {
 				if (!response.ok) {
 					msg = "Request deploy failed";
 				}
-				// let msg = response.ok ? "Request deploy success" : "Request deploy failed";
+				
+				// ALT: let msg = response.ok ? "Request deploy success" : "Request deploy failed";
+				
 				setDeployResult(msg);
 
 				clearResult();
